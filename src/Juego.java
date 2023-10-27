@@ -18,14 +18,14 @@ public class Juego {
             if (tablero.verificarGanador(jugador1.getFicha())) {
                 System.out.println(" Ganó: " + jugador1.getNombre());
                 break;
-            } else if (tablero.tableroLleno()) {
-                System.out.println("EMPATE");
-                break;
-            }
-            realizarMovimiento(jugador2);
+            } else
+                realizarMovimiento(jugador2);
             tablero.mostrarTablero();
             if (tablero.verificarGanador(jugador2.getFicha())) {
                 System.out.println("Ganó: " + jugador2.getNombre());
+                break;
+            }if (tablero.tableroLleno()) {
+                System.out.println("EMPATE");
                 break;
             }
         }
